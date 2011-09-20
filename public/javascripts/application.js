@@ -1,2 +1,13 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function set_tag_fields() {
+  inited=false;
+  $('.tag_field').tagit({
+    allowSpaces: true, 
+    removeConfirmation: true
+  });
+  inited=true;      
+};
+
+
+$(function() {
+	set_tag_fields();
+});

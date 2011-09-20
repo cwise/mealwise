@@ -1,4 +1,6 @@
 class MealsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /meals
   # GET /meals.xml
   def index
@@ -24,8 +26,8 @@ class MealsController < ApplicationController
   # GET /meals/new
   # GET /meals/new.xml
   def new
-    @meal = Meal.new
-
+    @meal = Meal.new(:user_id => current_user.id)
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @meal }
