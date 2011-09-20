@@ -4,7 +4,7 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.xml
   def index
-    @meals = Meal.all
+    @meals = Meal.page(params[:page]).per(25)
 
     respond_to do |format|
       format.html # index.html.erb

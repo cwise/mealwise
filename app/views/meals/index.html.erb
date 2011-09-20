@@ -20,6 +20,12 @@
 <% end %>
 </table>
 
+<div id='pagination_container'>
+  <%= paginate @meals %>
+</div>
+
 <br />
 
 <%= link_to 'New Meal', new_meal_path, :class => 'button' %>
+
+
