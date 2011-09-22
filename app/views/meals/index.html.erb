@@ -11,7 +11,7 @@
 
 <% @meals.each do |meal| %>
   <tr>
-    <td><%= meal.user_id %></td>
+    <td><%= meal.user.name %></td>
     <td><%= meal.name %></td>
     <td><%= link_to 'Show', meal %></td>
     <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
