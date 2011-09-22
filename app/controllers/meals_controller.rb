@@ -4,7 +4,9 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.xml
   def index
-    @meals = Meal.order(:name).tagged_with(params[:tag]).page(params[:page]).per(25)
+    @meals=Meal.order(:name)
+    @meals=@meals.tagged_with(params[:tag]) if params[:tag]
+    @meals=@meals.page(params[:page]).per(25)
 
     respond_to do |format|
       format.html # index.html.erb
