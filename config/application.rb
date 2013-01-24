@@ -38,6 +38,9 @@ module Mealwise
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
+    # Heroku requires this to be false
+    config.assets.initialize_on_precompile = false
+
     # Enable the asset pipeline
     config.assets.enabled = true
 

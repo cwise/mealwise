@@ -1,0 +1,2 @@
+module ServedMealsHelper
+end

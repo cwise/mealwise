@@ -4,9 +4,12 @@ gem 'rails', '3.2.11'
 gem 'acts-as-taggable-on', '~>2.1.0'
 gem 'devise'
 gem 'kaminari'
-gem 'pg'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+
+group :production, :test do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'sqlite3', "~> 1.3.5"
