@@ -9,8 +9,9 @@
       <%= link_to content_tag(:h2, 'MealWise'), root_url, :class => 'brand' %>
   	  <div class="nav-collapse in collapse" >
         <ul class="nav pull-right">
-          <%= content_tag :li, link_to('Cloud Search', home_path) %>
           <%= content_tag :li, link_to('Meals', meals_path) %>          
+          <%= content_tag :li, link_to('Served Meals', served_meals_path) %>          
+          <%= content_tag :li, link_to('Cloud Search', home_path) %>
         </ul>
       </div>
     </div>
