@@ -66,6 +66,9 @@ GEM
       rails (>= 3.0.0)
     less (2.2.2)
       commonjs (~> 0.2.6)
+    less-rails (2.2.3)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
     libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -144,7 +147,7 @@ DEPENDENCIES
   jquery-rails (~> 2.1.4)
   jquery-ui-rails (~> 3.0.1)
   kaminari
-  less
+  less-rails
   pg
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
