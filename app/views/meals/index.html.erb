@@ -1,21 +1,20 @@
 <h1>Listing meals</h1>
 
-<table>
+<table class='table table-striped' width='100%'>
   <tr>
     <th>User</th>
     <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Actions</th>
   </tr>
 
 <% @meals.each do |meal| %>
   <tr>
     <td><%= meal.user.name %></td>
-    <td><%= meal.name %></td>
-    <td><%= link_to 'Show', meal %></td>
-    <td><%= link_to 'Edit', edit_meal_path(meal) %></td>
-    <td><%= link_to 'Destroy', meal, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to meal.name, meal %></td>
+    <td>
+      <%= link_to 'Edit', edit_meal_path(meal), :class => 'btn btn-small'  %>
+      <%= link_to 'Destroy', meal, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-danger'  %>
+    </td>
   </tr>
 <% end %>
 </table>
@@ -26,7 +25,6 @@
 
 <br />
 
-<%= link_to 'New Meal', new_meal_path, :class => 'button' %>
-<%= link_to 'Cloud Search', home_path %>
+<%= link_to 'New Meal', new_meal_path, :class => 'btn btn-primary' %>
 
 
