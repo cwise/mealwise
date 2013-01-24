@@ -20,6 +20,8 @@ group :assets do
   gem 'coffee-rails', "~> 3.2.1"
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass-rails'
+  gem 'less'
+  gem 'therubyracer'
 end
 
 gem 'jquery-rails', '~> 2.1.4'
