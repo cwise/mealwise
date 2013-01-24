@@ -5,7 +5,7 @@ gem 'acts-as-taggable-on', '~>2.1.0'
 gem 'devise'
 gem 'kaminari'
 gem 'simple_form'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails'
 
 group :production, :test do
   gem 'pg'
