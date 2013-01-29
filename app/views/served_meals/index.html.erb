@@ -5,16 +5,16 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:served_at) %></th>
       <th><%= model_class.human_attribute_name(:meal) %></th>
+      <th><%= model_class.human_attribute_name(:served_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @served_meals.each do |served_meal| %>
       <tr>
-        <td><%= link_to served_meal.served_at, served_meal_path(served_meal) %></td>
-        <td><%= served_meal.meals.map{|m| m.name}.join(', ') %></td>
+        <td><%= link_to served_meal.meals.map{|m| m.name}.join(', '), served_meal_path(served_meal) %></td>
+        <td><%= served_meal.served_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_served_meal_path(served_meal), :class => 'btn btn-mini' %>
